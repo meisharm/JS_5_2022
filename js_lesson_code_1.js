@@ -1,20 +1,67 @@
-/* variables type 
-number
-string
-boolean 
-null
-undefined 
+/*
+what is a browser?
+ */
+
+
+/* 
+what is a web console?
 */
+
+
+/* 
+variables vs values
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* variables type 
+number  // 2 3.4 -4.5
+string // "hello world" 'yes' `my name is ${userName}`
+boolean // true or false
+null // no value
+undefined // no assignment yet
+*/
+
+
+
+
 
 /* declaration 
-let - if we need too change later
-const - if we don't want to change later
-var - old, scope problem
-no declaration - scope problem
+let - if we need too reassign later. block scope.
+const - if we don't need to reassign later. block scope.
+var - old, scope problem (function scope)
+no declaration - scope problem (global scope)
 */
+let userName; // declaration
 
-let age =17
-let userName =  "shimon" //backtick 
+userName = "shimon";
+
+
+let age =17 // declaration and assignment
 
 
 

@@ -1,6 +1,6 @@
 /*
 what is a browser?
- */
+*/
 
 
 /* 
@@ -9,31 +9,24 @@ what is a web console?
 
 
 /* 
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+ */
+
+
+
+
+
+
+
+/* 
 variables vs values
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
+named memory location
+*/
 
 
 
@@ -56,17 +49,31 @@ const - if we don't need to reassign later. block scope.
 var - old, scope problem (function scope)
 no declaration - scope problem (global scope)
 */
+
+
+
 let userName; // declaration
 
-userName = "shimon";
+userName = "shimon"; // assignment
 
 
-let age =17 // declaration and assignment
+let age = 17 // declaration and assignment
+/* 
+let score = 0; // declaration and assignment
+score++;    //עושה כמה דברים: מחזיר, מוסיף ושם מחדש
+score += 5
+score -= 3
+score --
 
 
 
 
-// 2+2  "str1"+"str2"  name[0] / % *  age++ age+1
+
+
+*/
+
+// 2+2  "str1"+"str2"   / % *  age++ age+1
+userName[0]
 userName.toLowerCase()
 userName.trim()
 userName.indexOf("o")

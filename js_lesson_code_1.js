@@ -5,15 +5,25 @@ what is a browser?
 
 /* 
 what is a web console?
+read evaluate print loop
 */
 
 
-/* 
+/* adding js code to html 
+
 <script>
-document.getElementById("demo").innerHTML = "My First JavaScript";
+document.getElementById("elmId").innerHTML = "My First JavaScript";
 </script>
+
  */
 
+
+
+/* adding js code to html
+
+<script src="index.js"></script>
+
+*/
 
 
 
@@ -28,6 +38,14 @@ variables vs values
 named memory location
 */
 
+/* allowed variable names - (identifiers) 
+let user1 = "moshenko"
+let _user1 = "user1"
+let $_user1 = "user1"
+no spaces allowed
+the first character can not be a digit
+
+*/
 
 
 
@@ -58,13 +76,17 @@ userName = "shimon"; // assignment
 
 
 let age = 17 // declaration and assignment
-/* 
+/* numbers
 let score = 0; // declaration and assignment
 score++;    //עושה כמה דברים: מחזיר, מוסיף ושם מחדש
 score += 5
 score -= 3
 score --
-
+2+3*5   סדר פעולות חשבון
+13%3 
+2+13%3
+3*13%3
+2**4
 
 
 
@@ -72,14 +94,25 @@ score --
 
 */
 
-// 2+2  "str1"+"str2"   / % *  age++ age+1
+
+
+
+
+// strings
 userName[0]
-userName.toLowerCase()
+userName[100]
+userName.toLowerCase()   // immutable data type  - returns a new string
 userName.trim()
 userName.indexOf("o")
 userName.slice(3,7)
 userName.replace("on","shon")
 console.log("hello " + userName)
+userName += " addString"
+'He said: "hello world"'
+"He said: \"hello world\""
+`He said: \`"hello world\`"`
+
+
 // 
 
 let isOnLine = false
@@ -87,6 +120,56 @@ let isOnLine = false
 console.log(3<2)
 
 console.log(1<2&&2<3)
+
+
+
+/* type conversions 
+
+
+Boolean(0)
+
+
+parseFloat("5")
+
+
+parseInt("5")
+
+
+parseInt("5.5")
+
+
+parseInt(5.5)
+
+
++"5"
+
+!!0
+
+!0
+
+!2
+
+!!3
+
+String(9)
+
+(9).toString()
+
+
+9.5.toString()
+
+(7.81).toString()
+
+*/
+
+
+
+
+
+
+
+
+
 
 
 // 

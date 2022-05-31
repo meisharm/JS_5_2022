@@ -1,6 +1,12 @@
+
+
+
 /*
 what is a browser?
 */
+
+
+// https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 
 
 /* 
@@ -34,11 +40,17 @@ document.getElementById("elmId").innerHTML = "My First JavaScript";
 variables vs values
 */
 
+
+
+
 /* 
 named memory location
 */
 
+
+
 /* allowed variable names - (identifiers) 
+
 let user1 = "moshenko"
 let _user1 = "user1"
 let $_user1 = "user1"
@@ -51,7 +63,7 @@ the first character can not be a digit
 
 /* variables type 
 number  // 2 3.4 -4.5
-string // "hello world" 'yes' `my name is ${userName}`
+string // "hello world" 'yes' `my name is ${userName}`   template literals for strings
 boolean // true or false
 null // no value
 undefined // no assignment yet
@@ -170,7 +182,63 @@ String(9)
 
 
 
+/* 
 
+JavaScript Arithmetic Operators
+Arithmetic operators are used to perform arithmetic on numbers:
+
+Operator	Description
++	Addition
+-	Subtraction
+*	Multiplication
+**	Exponentiation (ES2016)
+/	Division
+%	Modulus (Division Remainder)
+++	Increment
+--	Decrement
+
+*/
+
+/* 
+
+JavaScript Assignment Operators
+Assignment operators assign values to JavaScript variables.
+
+Operator	Example	Same As
+
++=	x += y	x = x + y
+-=	x -= y	x = x - y
+*=	x *= y	x = x * y
+/=	x /= y	x = x / y
+%=	x %= y	x = x % y
+**=	x **= y	x = x ** y
+
+
+*/
+
+/*
+Operator	Description
+==	equal to
+===	equal value and equal type
+!=	not equal
+!==	not equal value or not equal type
+>	greater than
+<	less than
+>=	greater than or equal to
+<=	less than or equal to
+?	ternary operator
+
+*/
+
+
+/* 
+JavaScript Logical Operators
+Operator	Description
+&&	logical and
+||	logical or
+!	logical not
+
+*/
 
 // 
 

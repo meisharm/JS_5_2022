@@ -241,6 +241,28 @@ Operator	Description
 */
 
 // 
+/*  || vs ??
+
+
+0||100
+""||100
+false||100
+1||100
+-1||100
+17||100
+"hello"||100
+
+0??100
+
+""??100
+
+undefined??100
+
+null??100
+
+false??100
+
+*/
 
 
 if(age>18){
@@ -250,8 +272,31 @@ if(age>18){
 }
 
 
+// turnery operator
+let name = userName?userName:"anonymous" 
+
 
 // 
+
+
+
+if(1){console.log(true)}else{false}
+
+if(0){console.log(true)}else{false}
+
+
+if(""){console.log(true)}else{false}
+
+if("hello world"){console.log(true)}else{false}
+
+if(null){console.log(true)}else{false}
+
+if(undefined){console.log(true)}else{false}
+
+// 
+
+
+
 
 
 for (let i = 0; i <10; i++) {   
@@ -259,9 +304,29 @@ for (let i = 0; i <10; i++) {
 }
 
 
+// 
+
+
+let i = 0
+while(i<10){
+    console.log(i)
+    i++
+}
 
 
 // 
+let i = 0
+do{
+    console.log(i)
+    i++
+}while(i<10)
+
+
+
+// 
+
+
+
 
 
 const add2 = function(number){

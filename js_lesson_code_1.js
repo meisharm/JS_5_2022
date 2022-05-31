@@ -80,6 +80,39 @@ var - old, scope problem (function scope)
 no declaration - scope problem (global scope)
 */
 
+// סקופ של משתנה - איפה מכירים את המשתנה איפה אפשר לראות אותו לגשת אליו לשנות אותו
+{
+    let number_let = 10;
+    console.log(number_let)
+}
+
+
+
+/* 
+
+{
+let number_let = 10;
+console.log(number_let);
+}   scope in the block
+
+{
+const number_const = 10;
+console.log(number_const);
+}     scope in the block
+
+{
+var number_var = 10;
+console.log(number_var);
+}    scope is global (no function)
+
+{
+number_non = 10;
+console.log(number_non);
+}       scope is global
+
+
+*/
+
 
 
 let userName; // declaration
@@ -111,6 +144,10 @@ score --
 
 
 // strings
+
+// let userName; // declaration
+
+// userName = " Shimon"; // assignment
 userName[0]
 userName[100]
 userName.toLowerCase()   // immutable data type  - returns a new string
@@ -127,18 +164,40 @@ userName += " addString"
 
 // 
 
-let isOnLine = false
+let isOnLine = false;
 
 console.log(3<2)
 
-console.log(1<2&&2<3)
+console.log(1<2&&2<3)  // and
 
+console.log(1<2||6<3)   // or
+
+
+
+true||false
+true
+true||true
+true
+false||false
+false
+false&&true
+false
 
 
 /* type conversions 
 
 
+
 Boolean(0)
+
+false
+Boolean(0.0001)
+
+true
+Boolean(-0.0001)
+
+true
+
 
 
 parseFloat("5")
@@ -152,10 +211,46 @@ parseInt("5.5")
 
 parseInt(5.5)
 
+parseFloat("5")
+5
+
+parseFloat("vnkfjn5")
+NaN
+
+typeof NaN
+'number'
+
+parseFloat("5.7")
+5.7
+parseInt("5")
+
+5
+parseInt("5.3")
+
+5
+parseInt("-5.3")
+
+-5
+parseInt("-5.99")
+
+-5
 
 +"5"
 
+!! - conversion to boolean:
+
 !!0
+false
+!!17
+true
+!!"hello"
+true
+!!""
+false
+!!undefined
+false
+!!null
+false
 
 !0
 
@@ -219,14 +314,34 @@ Operator	Example	Same As
 /*
 Operator	Description
 ==	equal to
-===	equal value and equal type
+===	equal value and equal type תמיד נשתמש בזה:
+
+0==false
+true
+""==false
+true
+0===false
+false
+""===false
+false
+
 !=	not equal
-!==	not equal value or not equal type
+
+0!=false
+false
+!==	not equal value or not equal type נשתמש בזה
+
+0!==false
+true
 >	greater than
 <	less than
 >=	greater than or equal to
 <=	less than or equal to
 ?	ternary operator
+(5<6)?1:0;
+1
+(7<6)?1:0;
+0
 
 */
 
@@ -241,6 +356,9 @@ Operator	Description
 */
 
 // 
+
+
+
 /*  || vs ??
 
 

@@ -394,7 +394,45 @@ if(age>18){
 let name = userName?userName:"anonymous" 
 
 
-// 
+
+// else if
+let day = 1;
+if (day === 1) {
+console.log('Sunday');
+} else if (day === 2) {
+console.log('Monday');
+} else if (day === 3) {
+console.log('Tuesday');
+} else if (day === 4) {
+console.log('Wednesday');
+} else if (day === 5) {
+console.log('Thursday');
+} else if (day === 6) {
+console.log('Friday');
+} else if (day === 7) {
+console.log('Saturday'); } else {
+console.log('Not 1-7 number') }
+
+
+// switch case
+
+let answer = 2 + 2;
+
+switch (answer) {
+  case 3:
+    alert( 'Too small' );
+    break;
+  case 4:
+    alert( 'Exactly!' );
+    break;
+  case 5:
+    alert( 'Too big' );
+    break;
+  default:
+    alert( "I don't know such values" );
+}
+
+// https://www.javascripttutorial.net/javascript-switch-case/
 
 
 
@@ -425,7 +463,7 @@ for (let i = 0; i <10; i++) {
 // 
 
 
-let i = 0
+// let i = 0
 while(i<10){
     console.log(i)
     i++
@@ -441,11 +479,35 @@ do{
 
 
 
+// for of / for each / for in 
+
+// arrays - mutable and by reference
+
+
+const users = ["meishar", "rotem", "yogev"]
+
+
+const myArray = [1,2,3]
+
+myArray.length
+
+myArray[0]
+
+myArray[2]
+
+myArray[3]
+
+                        
+for(element in myArray){console.log(element)} // index
+                        
+
+for(element of myArray){console.log(element)} //item
+                        
+
+myArray.forEach((element)=>console.log(element)) // callback function - we'll learn this in the future 
+
+
 // 
-
-
-
-
 
 const add2 = function(number){
     return number+2

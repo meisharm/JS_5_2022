@@ -1,31 +1,26 @@
 
-const numArray = [1, 2, 3]
-
-const ul = document.getElementById("ul")
-
-
-
+const numArray = [1, 2, 3];
+const ul = document.getElementById("ul");
 const bnt = document.getElementById("bnt");
 
 const arrayToEvan = function(arr){
    const evenArray = [];
-   for(const element in arr ){
+   for(const element of arr ){
       if(element%2===0){
          evenArray.push(element)
       }
    }
    return evenArray
-
 }
 
-const evenArray = arrayToEvan(numArray)
+const evenArrayOut = arrayToEvan(numArray);
 
 bnt.onclick = () =>{
-   for (const num of evenArray){
+   for (let num of evenArrayOut){
 
-      const li =  document.createElement("li")
-      li.innerHTML = num
-   ul.appendChild(li)
+      const li =  document.createElement("li");
+      li.innerHTML = num;
+      ul.appendChild(li);
    }
    
 

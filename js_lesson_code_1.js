@@ -519,35 +519,90 @@ myArray[3]
 
 myArray.push(6)
 
-                        
-for(ind in myArray){console.log(ind)} // index
+for(let i = 0; i < myArray.length; i++){console.log(myArray[i])} // regular loop
+
+
+for(let ind in myArray){console.log(myArray[ind])} // index
                         
 
-for(element of myArray){console.log(element)} //item
+for(let element of myArray){console.log(element)} //item
                         
 
 myArray.forEach((element)=>console.log(element)) // callback function - we'll learn more about this in the future 
 
+myArray.forEach(function(element){console.log(element)}) // callback function - we'll learn more about this in the future 
 
+// תרגיל כיתה
+
+
+let arraySum = 0;
+
+for(let i = 0; i < myArray.length; i++){
+    arraySum += myArray[i]
+
+}
+console.log(arraySum)
 // 
 
 const add2 = function(number){
     return number+2
 }
 
+/*
+פונקציה יכולה:
+להחזיר ערך
+:לעשות משהו במציאות  
+1. console.log
+2. DOM manipulation
+ לשנות אובייקט מיוטיבל
+לשנות או להגדיר משתנה גלובלי
+שני האחרונים לא בסט פרקטיס
+*/
+
 
 const addToConsolLog = function (num1,num2){
     console.log(num1+num2)
 }
 
+addToConsolLog(2,4)
+
+
+
+
+
+
+
+
+
+
 function addToReturn(num1,num2){
-    return num1+num2
+    console.log("done");
+    return num1+num2;
 }
 
+addToReturn(2,4)
 
 
+
+// 
+
+
+const addToConsolLogArrow = (num1,num2) => {
+    console.log(num1+num2)
+}
+
+addToConsolLogArrow(2,4)
+
+
+
+
+
+
+
+
+// const arr = [44,66]
 const onlyEven = function(arr){
-    const returnArray = []
+    const returnArray = [];
     for (let i = 0; i < arr.length;i++){
         if(arr[i]%2===0){
             returnArray.push(arr[i])
@@ -556,8 +611,18 @@ const onlyEven = function(arr){
     }
     return returnArray
 }
+let myArrayToBeEven = [1,2,3,4,5,6,7]
+onlyEven(myArrayToBeEven)
 
+// תרגיל כיתה: להריץ את הקוד למעלה
+// תרגיל כיתה: לאפס מספרים זוגיים - 
+// מקבלים אראי מספרים ואיפה שיש מספר זוגי יהיה אפס במערך שמוחזר
 
+// [1,2,3,4,5,6,7,8,9,10,11] => [1,0,3,0,5,0,7,0,9,0,11]
+
+//  f(x)= x+2 
+
+// f(9)= 9 + 2 = 11
 
 
 5<2 && 8>2

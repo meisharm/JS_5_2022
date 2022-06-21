@@ -11,7 +11,7 @@ bnt.onclick = () =>{
    for (const task of tasksArray){
 
       const li =  document.createElement("li")
-   li.innerHTML = task
+      li.innerHTML = task
    ul.appendChild(li)
    }
    

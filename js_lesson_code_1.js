@@ -235,7 +235,8 @@ parseInt("-5.99")
 
 -5
 
-+"5"
++"5"// המרה למספר
+5
 
 !! - conversion to boolean:
 
@@ -251,6 +252,10 @@ false
 false
 !!null
 false
+
+
+
+
 
 !0
 
@@ -325,7 +330,7 @@ false
 ""===false
 false
 
-!=	not equal
+!=	not equal  // לא מתשמשים
 
 0!=false
 false
@@ -338,7 +343,7 @@ true
 >=	greater than or equal to
 <=	less than or equal to
 ?	ternary operator
-(5<6)?1:0;
+(5<6)?1:0;// המרה לבולאיני של הערך הנבדק
 1
 (7<6)?1:0;
 0
@@ -369,6 +374,9 @@ false||100
 -1||100
 17||100
 "hello"||100
+
+
+
 
 0??100
 
@@ -414,6 +422,18 @@ console.log('Saturday'); } else {
 console.log('Not 1-7 number') }
 
 
+
+// תרגיל כיתה
+
+let bmi = 20
+if(bmi<18.5) {
+    console.log("too low")
+}else if(bmi>=18.5&&bmi<=25){
+    console.log("in range")
+}else{
+    console.log("too high")
+}
+
 // switch case
 
 let answer = 2 + 2;
@@ -449,7 +469,7 @@ if(null){console.log(true)}else{false}
 
 if(undefined){console.log(true)}else{false}
 
-// 
+// for loop
 
 
 
@@ -481,13 +501,13 @@ do{
 
 // for of / for each / for in 
 
-// arrays - mutable and by reference
+// arrays - mutable + by reference
 
 
-const users = ["meishar", "rotem", "yogev"]
+const users = ["meishar", "rotem", "yogev",77,false,null]
 
 
-const myArray = [1,2,3]
+const myArray = ["a","b","c"]
 
 myArray.length
 
@@ -497,14 +517,16 @@ myArray[2]
 
 myArray[3]
 
+myArray.push(6)
+
                         
-for(element in myArray){console.log(element)} // index
+for(ind in myArray){console.log(ind)} // index
                         
 
 for(element of myArray){console.log(element)} //item
                         
 
-myArray.forEach((element)=>console.log(element)) // callback function - we'll learn this in the future 
+myArray.forEach((element)=>console.log(element)) // callback function - we'll learn more about this in the future 
 
 
 // 
@@ -512,6 +534,31 @@ myArray.forEach((element)=>console.log(element)) // callback function - we'll le
 const add2 = function(number){
     return number+2
 }
+
+
+const addToConsolLog = function (num1,num2){
+    console.log(num1+num2)
+}
+
+function addToReturn(num1,num2){
+    return num1+num2
+}
+
+
+
+const onlyEven = function(arr){
+    const returnArray = []
+    for (let i = 0; i < arr.length;i++){
+        if(arr[i]%2===0){
+            returnArray.push(arr[i])
+        }
+    
+    }
+    return returnArray
+}
+
+
+
 
 5<2 && 8>2
 

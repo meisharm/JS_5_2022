@@ -623,6 +623,18 @@ onlyEven(myArrayToBeEven)
 //  f(x)= x+2 
 
 // f(9)= 9 + 2 = 11
+
+// מה פונקציה מחזירה אם אין ריטרנ?
+// הפרמטרים עוברים לפי הסדר
+
+const myfunction = function(pram) {
+    return "the parm is: " + pram
+    console.log(pram)
+}
+
+
+
+
 // object literals
 let myObj = {name: 'yossi', age:27, occupation: "programer" }
 // array methods 
@@ -633,12 +645,27 @@ myArray.filter(item => item%2)
 myArray.map(item => [item])
 
 // array.reduce - not for now
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial);
+// expected output: 10
 
 
 // 
 
 const tasksArray = [{text:"first task",active:true},{text:"secund task",active:true},
 {text:"third task",active:true},{text:"forth task",active:true}]
+
+
+
+
 
 5<2 && 8>2
 

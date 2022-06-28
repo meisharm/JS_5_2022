@@ -623,7 +623,22 @@ onlyEven(myArrayToBeEven)
 //  f(x)= x+2 
 
 // f(9)= 9 + 2 = 11
+// object literals
+let myObj = {name: 'yossi', age:27, occupation: "programer" }
+// array methods 
+// let myArray = [1,2,3]
 
+myArray.filter(item => item%2)
+
+myArray.map(item => [item])
+
+// array.reduce - not for now
+
+
+// 
+
+const tasksArray = [{text:"first task",active:true},{text:"secund task",active:true},
+{text:"third task",active:true},{text:"forth task",active:true}]
 
 5<2 && 8>2
 

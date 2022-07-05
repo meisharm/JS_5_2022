@@ -614,6 +614,65 @@ const onlyEven = function(arr){
 let myArrayToBeEven = [1,2,3,4,5,6,7]
 onlyEven(myArrayToBeEven)
 
+// מדברים על שיעורי הבית
+
+// כיתבו פונקציה שמקבלת array  של מספרים מדפיסה לקונסול כל מספר בנפרד 
+
+
+const myfunction_1 = function(arr){
+      for(let item of arr){
+          console.log(item)
+      }
+
+}
+
+
+function myfunction_2(arr){
+    for(let item of arr){
+        console.log(item)
+    }
+    
+}
+// arrow function the "this" problem
+const myfunction_3 = (arr)=>{
+    for(let item of arr){
+        console.log(item)
+    }
+    
+}
+
+const addArrow = (num1,num2)=>{
+    console.log(num1+num2)
+    return num1+num2
+}
+
+addArrow(2,4)
+const greetArrow = ()=>{
+    return "hi there"
+    console.log("hi!")    // will never run
+}
+
+
+const arraySquare = function(arr){
+    const arraySq = [];
+    for(let number of arr){
+        arraySq.push(number**2)
+    }
+    return arraySq
+} 
+// 
+
+function max(arr){
+    let key=arr[0];
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]>key){
+            key=arr[i];
+        }
+    }
+    return key;
+}
+
+
 // תרגיל כיתה: להריץ את הקוד למעלה
 // תרגיל כיתה: לאפס מספרים זוגיים - 
 // מקבלים אראי מספרים ואיפה שיש מספר זוגי יהיה אפס במערך שמוחזר
@@ -631,18 +690,48 @@ const myfunction = function(pram) {
     return "the parm is: " + pram
     console.log(pram)
 }
+// 
 
 
 
 
-// object literals
-let myObj = {name: 'yossi', age:27, occupation: "programer" }
+
+
 // array methods 
 // let myArray = [1,2,3]
+// 
+
 
 myArray.filter(item => item%2)
 
+/*
+let myArray = [1,2,3]
+
+myArray.filter(item => item%2)
+(2) [1, 3]
+let myArray = [1,2,3]
+
+myArray.filter((item) => {item%2})
+[]
+let myArray = [1,2,3]
+
+myArray.filter((item) => {return item%2})
+(2) [1, 3]
+let myArray = [1,2,3]
+
+myArray.filter(function(item){return item%2})
+(2) [1, 3]
+myArray
+(3) [1, 2, 3]
+*/
+
 myArray.map(item => [item])
+/*
+myArray.map((item) => {return item**2})
+(3) [1, 4, 9]
+myArray.map(item => item+1)
+(3) [2, 3, 4]
+*/
 
 // array.reduce - not for now
 const array1 = [1, 2, 3, 4];
@@ -659,12 +748,85 @@ console.log(sumWithInitial);
 
 
 // 
+// object literals
+let person = {name: 'yossi', age:27, occupation: "programer" }
+// 
+person.name
+// 
+person["name"]
+// 
+let address = {
+    'building no': 3960,
+    street: 'North 1st street',
+    state: 'CA',
+    country: 'USA'
+};
+// 
+address['building no'];
+// 
+console.log(address.district); // undefined
+// 
 
+let newPerson = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+
+newPerson.firstName = 'Jane';
+
+console.log(newPerson);
+
+// 
+
+newPerson.age = 25;
+// 
+delete newPerson.age;
+// "this" in regular function
+newPerson.greet = function(){console.log(`hello my name is ${this.firstName}`)}
+// 
+// "this" in arrow function
+newPerson.greetArrow = ()=>{console.log(`hello my name is ${this.firstName}`)}
+// 
+let employee = {
+    firstName: 'Peter',
+    lastName: 'Doe',
+    employeeId: 1
+};
+
+console.log('ssn' in employee);
+console.log('employeeId' in employee);
+// loop in object
+for(const property in {name:"yossi",age:12}){
+    console.log(property)
+}
+// 
+function showProps(obj, objName) {
+    let result = '';
+    for (const i in obj) {
+      // obj.hasOwnProperty() is used to exclude properties from the object's prototype chain
+      if (obj.hasOwnProperty(i)) {
+        result += `${objName}.${i} = ${obj[i]}\n`;
+      }
+    }
+    console.log(result);
+  }
+//   
+  showProps({name:"yossi",age:12},"user")
+
+
+// 
 const tasksArray = [{text:"first task",active:true},{text:"secund task",active:true},
 {text:"third task",active:true},{text:"forth task",active:true}]
 
+// 
+for(const property in {name:"yossi",age:12,greet(){console.log("hi")}}){
+    console.log(property)
+}
 
-
+// 
+const user = {name:"yossi",age:12,greet(){console.log("hi")}}
+user.greet()
+// 
 
 
 5<2 && 8>2

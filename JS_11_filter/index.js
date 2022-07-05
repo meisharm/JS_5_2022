@@ -2,14 +2,12 @@ const numArray = [1, 2, 3];
 const ul = document.getElementById("ul");
 const bntOdds = document.getElementById("bntOdds");
 const bntEvens = document.getElementById("bntEvens");
-
+const inputNumber = document.getElementById("inputNumber");
 const bntInput = document.getElementById("inputBnt");
 bntInput.onclick = function(){
-   console.log("hi!")
-   const newNum = +document.getElementById('number').value
-   document.getElementById('number').value = ""
+   const newNum = +inputNumber.value
+   inputNumber.value = ""
    numArray.push(newNum)
-
 }
 bntOdds.onclick = () =>{
    ul.innerHTML = "";

@@ -1,9 +1,9 @@
 const postArray = [{user:"Isashar", text:"shabat shalom!",comments:[{text:"shabat shalom Isashar!"},{text:"shabat shalom motek!"}],hidden:false}];
 const ul = document.getElementById("ul");
-const bntAct = document.getElementById("bntAct");
-const bntAll = document.getElementById("bntAll");
+const bntPostAndComments = document.getElementById("bntPostAndComments");
+const bntOnlyPosts = document.getElementById("bntOnlyPosts");
 
-bntAct.onclick = () =>{
+bntPostAndComments.onclick = () =>{
    ul.innerHTML = "";
    for (const post of postArray){
       if(!post.hidden){
@@ -22,12 +22,12 @@ bntAct.onclick = () =>{
       }
    }
 }
-bntAll.onclick = () =>{
+bntOnlyPosts.onclick = () =>{
    ul.innerHTML = "";
-   for (const task of tasksArray){
+   for (const post of postArray){
       
          const li =  document.createElement("li")
-         li.innerHTML = task.text
+         li.innerHTML = post.text
          ul.appendChild(li)
       
    }

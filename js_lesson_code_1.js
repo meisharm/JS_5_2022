@@ -827,7 +827,16 @@ for(const property in {name:"yossi",age:12,greet(){console.log("hi")}}){
 const user = {name:"yossi",age:12,greet(){console.log("hi")}}
 user.greet()
 // 
+const runners =[]
 
+const makeRunner = (num)=> {return{first:`name ${num}`,last:`last name ${num}`,
+   results_:[Math.random()+1,Math.random()+1,Math.random()+1]}}
+
+for(let i = 0 ;i<10;i++){
+   runners.push(makeRunner(i))
+}
+
+// 
 
 5<2 && 8>2
 

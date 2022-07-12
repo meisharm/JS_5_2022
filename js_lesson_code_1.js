@@ -704,6 +704,33 @@ const myfunction = function(pram) {
 
 myArray.filter(item => item%2)
 
+
+/*
+const myArray = [1,2,3]
+
+const isOdd = (element)=>{return element%2!==0;}
+   
+const addsArray = myArray.filter(isOdd);
+
+addsArray
+(2) [1, 3]
+*/
+
+/*
+תרגיל: בצעו בעזרת פילטר ופונקציה (עם שם ) ששומר רק על המספרים שגדולים מעשר
+
+const myArray = [1,2,3,33,45]
+
+const isBigerThen10 = (element)=>{return element>10;}
+   
+const bigNumArray = myArray.filter(isBigerThen10);
+
+bigNumArray
+*/
+
+
+
+
 /*
 let myArray = [1,2,3]
 
@@ -751,9 +778,9 @@ console.log(sumWithInitial);
 // object literals
 let person = {name: 'yossi', age:27, occupation: "programer" }
 // 
-person.name
+person.name // יותר פשוט עובד רק אם אין רווח בקיי
 // 
-person["name"]
+person["name"] //תמיד עובדת
 // 
 let address = {
     'building no': 3960,
@@ -761,6 +788,19 @@ let address = {
     state: 'CA',
     country: 'USA'
 };
+// 
+let person1 = {"first name": 'yossi', age:27, occupation: "programer" , address: {
+    'building no': 3960,
+    street: 'North 1st street',
+    state: 'CA',
+    country: 'USA'
+}}
+// 
+let person2 = {"first name": 'yossi', age:27, 
+occupation: "programer" , address: address}
+// 
+let person2 = {"first name": 'yossi', age:27, 
+occupation: "programer" , address} // syntactic sugar
 // 
 address['building no'];
 // 
@@ -829,14 +869,22 @@ user.greet()
 // 
 const runners =[]
 
-const makeRunner = (num)=> {return{first:`name ${num}`,last:`last name ${num}`,
+const makeRunner = (runnerNum)=> {return{first:`name ${runnerNum}`,last:`last name ${runnerNum}`,
    results_:[Math.random()+1,Math.random()+1,Math.random()+1]}}
 
-for(let i = 0 ;i<10;i++){
-   runners.push(makeRunner(i))
+
+const makeRunners = (numOfRunners)=> {
+    const runners =[]
+    for(let i = 0 ;i<numOfRunners;i++){
+        runners.push(makeRunner(i))
+     }
+     return runners
 }
 
-// 
+// spred
+let newMyArray = [...myArray]
+
+let newUser = {...user}
 
 5<2 && 8>2
 

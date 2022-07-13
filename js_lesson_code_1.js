@@ -761,14 +761,14 @@ myArray.map(item => item+1)
 */
 
 // array.reduce - not for now
-const array1 = [1, 2, 3, 4];
+// const array1 = [1, 2, 3, 4];
 
-// 0 + 1 + 2 + 3 + 4
+/* // 0 + 1 + 2 + 3 + 4
 const initialValue = 0;
 const sumWithInitial = array1.reduce(
   (previousValue, currentValue) => previousValue + currentValue,
   initialValue
-);
+); */
 
 console.log(sumWithInitial);
 // expected output: 10
@@ -796,8 +796,10 @@ let person1 = {"first name": 'yossi', age:27, occupation: "programer" , address:
     country: 'USA'
 }}
 // 
+/* 
 let person2 = {"first name": 'yossi', age:27, 
-occupation: "programer" , address: address}
+occupation: "programer" , address: address} 
+*/
 // 
 let person2 = {"first name": 'yossi', age:27, 
 occupation: "programer" , address} // syntactic sugar
@@ -867,7 +869,6 @@ for(const property in {name:"yossi",age:12,greet(){console.log("hi")}}){
 const user = {name:"yossi",age:12,greet(){console.log("hi")}}
 user.greet()
 // 
-const runners =[]
 
 const makeRunner = (runnerNum)=> {return{first:`name ${runnerNum}`,last:`last name ${runnerNum}`,
    results_:[Math.random()+1,Math.random()+1,Math.random()+1]}}
@@ -881,7 +882,100 @@ const makeRunners = (numOfRunners)=> {
      return runners
 }
 
-// spred
+// myMap 
+
+
+const myfunc = function(x){
+    return x+2
+}
+
+const ourMap = (array, func)=>{
+    const retArr = [];
+    for(let i=0 ;i<array.length; i++){
+        console.log("i", i)
+        console.log("array[i]", array[i])
+        console.log("func(array[i])", func(array[i]))
+
+        retArr.push(func(array[i]));
+    }
+    return retArr
+}
+
+const myArray1 = [8,2,3,33]
+
+ourMap(myArray1, myfunc)
+
+// ourFilter
+
+const myFunc1 = (item)=>{
+    return item>5;
+}
+const ourFilter = (array, func)=>{
+    const retArr = [];
+    for(let i=0 ;i<array.length; i++){
+        console.log("i", i)
+        console.log("array[i]", array[i])
+        console.log("func(array[i])", func(array[i]))
+        if(func(array[i])){retArr.push(array[i])};
+    }
+    return retArr
+}
+const myArray2 = [8,2,3,33]
+
+ourFilter(myArray2,myFunc1)
+
+
+// array.reduce 
+const array1 = [10, 15, 3, 4];
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (resultTillNow, nextValue) => {
+      console.log("resultTillNow", resultTillNow);
+      console.log("nextValue", nextValue)
+      return resultTillNow + nextValue
+    }
+      ,
+  initialValue
+);
+
+/* VM860:5 resultTillNow 0
+VM860:6 nextValue 10
+VM860:5 resultTillNow 10
+VM860:6 nextValue 15
+VM860:5 resultTillNow 25
+VM860:6 nextValue 3
+VM860:5 resultTillNow 28
+VM860:6 nextValue 4 */
+
+sumWithInitial
+// 32
+
+const wordArray = ["I","love","JS"];
+
+wordArray.reduce(
+    (resultTillNow, nextItem) => resultTillNow + " " + nextItem,
+    "" //בלי ערך פה עבד יותר טוב - ללא רווח בהתחלה
+)
+
+
+
+/* sorting in place! 
+
+[2,3,1].sort()
+(3) [1, 2, 3]
+
+[2,3,1,1000,100].sort()
+(5) [1, 100, 1000, 2, 3]
+
+
+[2,3,1].sort((a,b)=>a-b)
+(3) [1, 2, 3]
+
+[2,3,1].sort((a,b)=>-a+b)
+(3) [3, 2, 1]
+*/
+
+// spred - making a copy
 let newMyArray = [...myArray]
 
 let newUser = {...user}

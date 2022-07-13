@@ -1,5 +1,9 @@
-const tasksArray = [{text:"first task",active:true},{text:"secund task",active:true},
-{text:"third task",active:false},{text:"forth task",active:true}];
+const tasksArray = [
+{text:"first task",active:true},
+{text:"secund task",active:true},
+{text:"third task",active:false},
+{text:"forth task",active:true}
+];
 const ul = document.getElementById("ul");
 const bntAct = document.getElementById("bntAct");
 const bntAll = document.getElementById("bntAll");

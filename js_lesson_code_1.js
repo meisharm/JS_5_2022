@@ -959,6 +959,21 @@ wordArray.reduce(
 
 
 
+[1,2,3].sort((a,b)=>a<b?1:-1)
+// (3) [3, 2, 1]
+[1,2,3].map(item=>({item:item}))
+// (3) [{…}, {…}, {…}]0: {item: 1}1: {item: 2}2: {item: 3}length: 3[[Prototype]]: Array(0)
+// let objArray = [1,2,3].sort((a,b)=>a<b?1:-1)
+// undefined
+let objArray = [1,2,3].map(item=>({"a":item}))
+objArray
+// (3) [{…}, {…}, {…}]0: {item: 1}1: {item: 2}2: {item: 3}length: 3[[Prototype]]: Array(0)
+objArray.sort((a,b)=>a<b?1:-1)
+// (3) [{…}, {…}, {…}]0: {item: 3}1: {item: 2}2: {item: 1}length: 3[[Prototype]]: Array(0)
+
+objArray.reduce((till,next)=>{
+    if (till.a>next.a) {return till}
+    else {return next}})
 /* sorting in place! 
 
 [2,3,1].sort()
@@ -1039,3 +1054,26 @@ myBool1||myBool2
 userEmail = null
 typeof userEmail
 'object'
+
+
+
+companies = [
+    {name: "Company One", category: "Finance", profit: 120},
+    {name: "Company Two", category: "Retail", profit: 990},
+    {name: "Company Three", category: "Auto", profit: 390},
+    {name: "Company Four", category: "Retail", profit: 450},
+    {name: "Company Five", category: "Technology", profit: 234},
+    {name: "Company Six", category: "Finance", profit: 117},
+    {name: "Company Seven", category: "Auto", profit: 120},
+    {name: "Company Eight", category: "Technology", profit: 40},
+    {name: "Company Nine", category: "Retail", profit: -5}
+ ];
+ 
+ companies.reduce((till, currentValue)=>{
+
+return `${till} ${currentValue.name} profit: ${currentValue.profit}`
+
+ },
+""
+ )
+ 

@@ -7,7 +7,7 @@ comments:[{text:"chag sameach Moshe!"},{text:"chage samech motek!"}],
 hidden:false}];
 const ulPost = document.getElementById("ul");
 const bntPostAndComments = document.getElementById("bntPostAndComments");
-const bntOnlyPosts = document.getElementById("bntOnlyPosts");
+const bntOnlyPosts = document.getElementById("bntOnlyCompanies");
 
 bntPostAndComments.onclick = () =>{
    ul.innerHTML = "";

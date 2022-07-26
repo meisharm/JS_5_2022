@@ -1,29 +1,69 @@
-const bnt = document.getElementById("bnt")
-const makeRunner = (runnerNum)=> {return{first:`name ${runnerNum}`,last:`last name ${runnerNum}`,
-   results:[Math.random()+1,Math.random()+1,Math.random()+1]}}
-const makeRunners = (numOfRunners)=> {
-    const runners =[];
-    for(let i = 0 ;i<numOfRunners;i++){
-        runners.push(makeRunner(i));
-     }
-     return runners;
-};
-const runnerTemplate = (runner)=>{
-    const runnerNameText = `name: ${runner.first} ${runner.last} results:`
-    const runnerResultsText = runner.results.reduce((text,result)=>{
-        text = `${text} <li>${result}</li>`;
-        return text
-    },"")
-    return `<div>${runnerNameText}</div> <ul>${runnerResultsText}</ul>`; 
+const companies = [
+    {name: "Company One", category: "Finance", profit: 120},
+    {name: "Company Two", category: "Retail", profit: 990},
+    {name: "Company Three", category: "Auto", profit: 390},
+    {name: "Company Four", category: "Retail", profit: 450},
+    {name: "Company Five", category: "Technology", profit: 234},
+    {name: "Company Six", category: "Finance", profit: 117},
+    {name: "Company Seven", category: "Auto", profit: 120},
+    {name: "Company Eight", category: "Technology", profit: 40},
+    {name: "Company Nine", category: "Retail", profit: -5}
+ ];
+ const ulComp = document.getElementById("ul");
+ const bntCompAndData = document.getElementById("bntCompaniesWithData");
+ const bntOnlyName = document.getElementById("bntOnlyCompanies");
+ 
+ 
+ const createCompanyListItem =  (company,withData) => {
+    const liComp =  document.createElement("li")
+    liComp.innerHTML = `${company.name}`
+    if(withData){
 
-}
-const runnerArray = makeRunners(3)
-
-bnt.onclick = function(){
-
-    runnerArray.forEach(runner =>{
-
-        document.body.innerHTML = document.body.innerHTML + runnerTemplate(runner);
-    } )
-
-}
+        const dataList = document.createElement("ul")
+        liComp.appendChild(dataList)
+        for(const prop in company){
+           const dataListItem = document.createElement("li")
+           dataListItem.innerHTML = `${prop}: ${company[prop]}`
+           dataList.appendChild(dataListItem);
+           
+        }
+    }
+    return liComp
+    
+ }
+ 
+ 
+ 
+ bntCompAndData.onclick = () =>{
+    ulComp.innerHTML = "";
+    for (const company of companies){
+       
+        //   const liComp =  document.createElement("li")
+        //   liComp.innerHTML = `${company.name}`
+        //   const dataList = document.createElement("ul")
+        //   liComp.appendChild(dataList)
+        //   for(const prop in company){
+        //      const dataListItem = document.createElement("li")
+        //      dataListItem.innerHTML = `${prop}: ${company[prop]}`
+        //      dataList.appendChild(dataListItem);
+             
+        //   }
+          ulComp.appendChild(createCompanyListItem(company,true))
+          
+       }
+    }
+ 
+ bntOnlyName.onclick = () =>{
+ 
+    ulComp.innerHTML = "";
+    for (const company of companies){
+       
+          const liComp =  document.createElement("li")
+          liComp.innerHTML = `${company.name}`
+          ulComp.appendChild(createCompanyListItem(company,false))
+          
+          
+       }
+    
+    }
+ 

@@ -995,6 +995,54 @@ let newMyArray = [...myArray]
 
 let newUser = {...user}
 
+
+
+// DOM
+
+// selectors
+
+document.getElementById("myId")
+document.getElementBytagName("H1") // html collection
+document.getElementByClassName("myClass")
+
+
+document.querySelector("p");
+document.querySelector(".myClass");
+document.querySelector("#bntId").innerHTML = "Hello World!";
+
+// adding event listeners
+
+/* 
+let bnt = document.createElement("botten")
+undefined
+document.body.append(bnt)
+undefined
+let bnt = document.createElement("button")
+undefined
+document.body.append(bnt)
+undefined
+bnt.innerHTML = "press me!"
+'press me!'
+bnt.onclick = function(e){console.log(e)}
+ƒ (e){console.log(e)}
+VM530:1 
+
+
+*/
+
+// <bnt onclick = "alert('yes!')">click me</bnt>
+
+
+bnt.onclick = function() {alert('yes!')}
+
+
+addEventListener(click,function(){alert('yes!')}) // function(e) 
+
+
+
+
+
+
 5<2 && 8>2
 
 !3<2
@@ -1077,3 +1125,26 @@ return `${till} ${currentValue.name} profit: ${currentValue.profit}`
 ""
  )
  
+
+ function infoComp(result, item){
+    if(result){return result + ` ${item.name} profit: ${item.profit}, `}
+    else{return`${item.name} profit: ${item.profit}, `};
+  }
+
+
+
+
+  let myArray3 = [{"a":1},{"a":2}]
+
+  const findMax = (till,next)=>{
+    if(till.a > next.a){return till};
+    return next
+
+  }
+  myArray3.reduce(findMax) // initialValue can be the default 
+
+  const absVal = (x) => {
+      if(x>=0){return x}
+      else {return (-1)*x}
+  }
+

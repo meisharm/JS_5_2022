@@ -13,26 +13,21 @@ const ulComp = document.getElementById("ul");
 const bntCompAndData = document.getElementById("bntCompaniesWithData");
 const bntOnlyName = document.getElementById("bntOnlyCompanies");
 
-
-const createCompanyListItem =  (company) => {
-
-}
-
 bntCompAndData.onclick = () =>{
    ulComp.innerHTML = "";
    for (const company of companies){
       
          const liComp =  document.createElement("li")
          liComp.innerHTML = `${company.name}`
+         ulComp.appendChild(liComp)
          const dataList = document.createElement("ul")
          liComp.appendChild(dataList)
          for(const prop in company){
             const dataListItem = document.createElement("li")
-            dataListItem.innerHTML = `${prop}: ${company[prop]}`
-            dataList.appendChild(dataListItem);
-            
+               dataListItem.innerHTML = `${prop}: ${company[prop]}`
+               dataList.appendChild(dataListItem);
+
          }
-         ulComp.appendChild(liComp)
          
       }
    }
